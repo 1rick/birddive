@@ -90,9 +90,9 @@
       		<div class="large-8 large-offset-2 columns">
       			<h1>Thoughts on Repurposable Web Templates</h1>
 <p>Posted on 2020-11-08</p>
-<p>I'm still knocking around the <a href="https://birddive.com/blog.2018-07-22.static.html">idea</a> of a (web-based?) static site generator in my head. And as part of that mental exercise, I thought I'd start at the end and work backwords with what the output HTML should look like. What would a versatile web template look like for a personal portfolio or small business site? </p>
+<p>I'm still knocking around the <a href="https://birddive.com/blog.2018-07-22.static.html">idea</a> of a (web-based?) static site generator in my head. And as part of that mental exercise, I thought I'd start at the end and work backwards with what the output HTML should look like. What would a versatile web template look like for a personal portfolio or small business site? </p>
 <p><strong>TL;DR:</strong> <a href="https://1rick.github.io/mejiro-theme/">This is what I came up with.</a></p>
-<p>Ideally a repurposable layout should be simple enough that it can work for almost any content. But what are the design choices that lead to a repurposable template? I'll touch on a few of those below.</p>
+<p>Ideally a repurposable layout should be simple enough that it can work for almost any content. But what are the design choices that lead to a "repurposable" template? I'll touch on a few of those below.</p>
 <p>As part of creating this little template, I had to study up on my CSS understanding a little bit, and dive into things like Flexbox and Grid that I hadn't really looked closely at before. In the interests of sharing, here are a few of the portions of CSS that I really liked, along with some comments on why I'm using them. For this template, I also avoided using any Javascript, partially because I need to study up on it, and also because I really want to stay as simple as possible. </p>
 <h3>1. Root variables for setting theme colors</h3>
 <p>I'm sure any web designer worth their salt knows about these, and yet I rarely see them at the top of any CSS files I encounter in the wild. I'll use these to set my document colors, just so that they're easy to for any users to change (i.e. more "repurposable"), and in the interests of allowing for light and dark themes, I'll establish an easily swappable color-background and color-foreground variable as well. </p>
@@ -107,7 +107,7 @@
 </code></pre>
 
 <h3>2. One-Column layout, with optimal line length for readability</h3>
-<p>In my work I've often seen complex template layouts created with multi-column content block, and those are perfectly fine -- but if you want to reuse them later, it might be tricky to make your content fit. So for this template, I'll stick to one-column, and in the interests of readability, let's not run it too wide. The <a href="https://baymard.com/blog/line-length-readability">50 to 70 characters per line rule</a> is a best practice I see broken way too often on the web. And in the past I've used max-width of containers to enforce it, but thanks to Jeremy Thomas's brilliant little <em><a href="https://jgthms.com/web-design-in-4-minutes/">Web Design in 4 mins</a></em>, let's use his recommendation of max-width: 50em along with some padding. We can set a line height of 1.5, and <a href="https://allthingssmitty.com/2016/12/26/add-line-height-to-body-copy/">leave it unitless</a> in case any dependencies end up using different units. </p>
+<p>I've often seen complex template layouts created with multi-column content block, and those are perfectly fine -- but if you want to reuse them later, it might be tricky to make your content fit. So for this template, I'll stick to one-column, and in the interests of readability, let's not run it too wide. The <a href="https://baymard.com/blog/line-length-readability">50 to 70 characters per line rule</a> is a best practice I see broken way too often on the web. And in the past I've used max-width of containers to enforce it, but thanks to Jeremy Thomas's brilliant little <em><a href="https://jgthms.com/web-design-in-4-minutes/">Web Design in 4 mins</a></em>, let's use his recommendation of max-width: 50em along with some padding. We can set a line height of 1.5, and <a href="https://allthingssmitty.com/2016/12/26/add-line-height-to-body-copy/">leave it unitless</a> in case any dependencies end up using different units. </p>
 <pre><code>
 #maincontent {
     margin: 0 auto;
@@ -134,7 +134,7 @@
 </code></pre>
 
 <h3>Closing thoughts</h3>
-<p>You can see the template in action <a href="https://1rick.github.io/mejiro-theme/">here</a>. The files, if you'd like to download and mess about with them yourself, are <a href="https://github.com/1rick/mejiro-theme/tree/gh-pages">on Github</a>. I didn't intend for this to look like the old standard Wordpress Twenty Twenty theme, but it does remind me of that a little bit. </p>
+<p>You can see the template in action <a href="https://1rick.github.io/mejiro-theme/">here</a>. The files, if you'd like to download and mess about with them yourself, are <a href="https://github.com/1rick/mejiro-theme/tree/gh-pages">on Github</a>. I didn't intend for this to look like the old standard Wordpress Twenty Twenty theme, but it does remind me of that a little bit. As for the nav bar, that was a little tricky as I did start with a collapsed mobile view (borrowing some ideas from <a href="https://www.youtube.com/watch?v=y4N-UeK0cJw">here</a>), with the media query declaring the "desktop view" for 800+ pixels. But I think it works well -- and there's no javascript involved. </p>
       		</div>
       	<!-- right spacer columns -->
     	<div class="large-2 columns">
