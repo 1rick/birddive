@@ -94,30 +94,32 @@
 <p>As part of creating this little template, I had to study up on my CSS understanding a little bit, and dive into things like Flexbox and Grid that I hadn't really looked closely at before. In the interests of sharing, here are a few of the portions of CSS that I really liked, along with some comments on why I'm using them. For this template, I also avoided using any Javascript, partially because I need to study up on it, and also because I really want to stay as simple as possible. </p>
 <h3>1. Root variables for setting theme colors</h3>
 <p>I'm sure any web designer worth their salt knows about these, and yet I rarely see them at the top of any CSS files I encounter in the wild. I'll use these to set my document colors, just so that they're easy to for any users to change (i.e. more "repurposable"), and in the interests of allowing for light and dark themes, I'll establish an easily swappable color-background and color-foreground variable as well. </p>
-<p>``` 
+<pre><code>
 :root {
   --primary-color: #00AEEF;
   --secondary-color: #cc5500;
   --page-background: ivory;
   --page-foreground: #333;
-  }</p>
-<p>```</p>
+  }
+
+</code></pre>
+
 <h3>2. One-Column layout, with optimal line length for readability</h3>
 <p>In my work I've often seen complex template layouts created with multi-column content block, and those are perfectly fine -- but if you want to reuse them later, it might be tricky to make your content fit. So for this template, I'll stick to one-column, and in the interests of readability, let's not run it too wide. The <a href="https://baymard.com/blog/line-length-readability">50 to 70 characters per line rule</a> is a best practice I see broken way too often on the web. And in the past I've used max-width of containers to enforce it, but thanks to Jeremy Thomas's brilliant little <em><a href="https://jgthms.com/web-design-in-4-minutes/">Web Design in 4 mins</a></em>, let's use his recommendation of max-width: 50em along with some padding. We can set a line height of 1.5, and <a href="https://allthingssmitty.com/2016/12/26/add-line-height-to-body-copy/">leave it unitless</a> in case any dependencies end up using different units. </p>
-<p>```</p>
-<h1>maincontent {</h1>
-<pre><code>margin: 0 auto;
-max-width: 50em;
-line-height: 1.5;
-padding: 4em 1em;
-color: var(--page-foreground);
+<pre><code>
+#maincontent {
+    margin: 0 auto;
+    max-width: 50em;
+    line-height: 1.5;
+    padding: 4em 1em;
+    color: var(--page-foreground);
+}
 </code></pre>
-<p>}</p>
-<p>```</p>
+
 <h3>3. Minimal interference with header background cover image</h3>
 <p>I like putting white text on darkened photos in my header sections, but applying dark overlays comes at the cost of fading the photo into the... um... background. A happy medium is applying a bit of a text shadow to assist with the contrast. And this leaves the photo a little more visible by default. The 'screen' background blending mode seems to darken the photo the least. If you need a little more, try 'overlay' or 'multiply'. </p>
-<p>```</p>
-<p>.hero {
+<pre><code>
+.hero {
     background-image: url("../images/header.jpg"), linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2));
     background-blend-mode: screen;
     background-position: center top;
@@ -126,8 +128,9 @@ color: var(--page-foreground);
     line-height: 1.2;
     padding: 10vw 2em;
     text-align: center;
-  }</p>
-<p>```</p>
+  }
+</code></pre>
+
 <h3>Closing thoughts</h3>
 <p>You can see the template in action <a href="https://birddive.com/assets/mejiro-theme/index.html">here</a>. The files, if you'd like to download and mess about with them yourself, are <a href="https://github.com/1rick/mejiro-theme/tree/gh-pages">on Github</a>. I didn't intend for this to look like the old standard Wordpress 2020 theme, but it does remind me of that a little bit. </p>
       		</div>
