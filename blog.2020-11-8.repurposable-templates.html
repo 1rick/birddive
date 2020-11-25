@@ -106,7 +106,7 @@
 
 </code></pre>
 
-<h3>2. One-Column layout, with optimal line length for readability</h3>
+<h3>2. One-Column layout, with a limited line length for optimal readability</h3>
 <p>I've often seen complex template layouts created with multi-column content block, and those are perfectly fine -- but if you want to reuse them later, it might be tricky to make your content fit. So for this template, I'll stick to one-column, and in the interests of readability, let's not run it too wide. The <a href="https://baymard.com/blog/line-length-readability">50 to 70 characters per line rule</a> is a best practice I see broken way too often on the web. And in the past I've used max-width of containers to enforce it, but thanks to Jeremy Thomas's brilliant little <em><a href="https://jgthms.com/web-design-in-4-minutes/">Web Design in 4 mins</a></em>, let's use his recommendation of max-width: 50em along with some padding. We can set a line height of 1.5, and <a href="https://allthingssmitty.com/2016/12/26/add-line-height-to-body-copy/">leave it unitless</a> in case any dependencies end up using different units. </p>
 <pre><code>
 #maincontent {
@@ -118,13 +118,39 @@
 }
 </code></pre>
 
-<h3>3. Minimal interference with header background cover image</h3>
+<h3>3. Full-bleed images by default, with option for narrow image constrained within the narrow body column</h3>
+<p>While I like the 50em width limitation for my body text, it's really nice to be able to break that constraint with images. So by default, let's make images full bleed, but retain the option of a "narrow_image" class to keep within the boundary. To do this, let's take a page from Kilian Valkov's and use the not() pseudo class to basically say, "anything that isn't an image or video within this <em>maincontent</em> container, keep it to 50rem wide". </p>
+<pre><code>
+#maincontent > *:not(img):not(video) { 
+    max-width: 50rem;
+    margin: auto;
+  }
+
+#maincontent img {
+    max-width: 100%;
+    display: block;
+    margin: 3rem auto;
+}
+</code></pre>
+
+<p>For images that you don't want to extend for the full width, let's add that class as well using media queries. Because after all, on mobile, this narrow column will extend full width.</p>
+<pre><code>
+
+@media screen and (min-width:800px) {
+
+    #maincontent .narrow_image {
+        max-width: 50rem;
+    }
+}
+</code></pre>
+
+<h3>4. Minimal interference with header background cover image</h3>
 <p>I like putting white text on darkened photos in my header sections, but applying dark overlays comes at the cost of fading the photo into the... um... background. A happy medium is applying a bit of a text shadow to assist with the contrast. And this leaves the photo a little more visible by default. The 'screen' background blending mode seems to darken the photo the least. If you need a little more, try 'overlay' or 'multiply'. </p>
 <pre><code>
 .hero {
     background-image: url("../images/header.jpg"), linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2));
     background-blend-mode: screen;
-    background-position: center top;
+    background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
     line-height: 1.2;
