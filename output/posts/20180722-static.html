@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Simple Static Sites for the Rest of Us - BirdDive.com</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="icon" href="/static/images/favicon.png" type="image/png">
+    <!-- RSS Feed link -->
+    <link rel="alternate" type="application/rss+xml" title="BirdDive.com RSS Feed" href="https://birddive.com/rss.xml">
+</head>
+</head>
+<body>
+    <header>
+    <a href="https://birddive.com"><img class="logo" src="/static/images/birddive-logo-white.svg" alt="logo"></a>
+    <!-- other header elements -->
+    <input id="toggler" class="toggler" type="checkbox">
+        <label for="toggler" class="burger">
+            <span>☰</span>
+        </label>
+    <nav>
+        <ul>
+            
+                <li><a href="/about.html">About</a></li>
+            
+                <li><a href="/posts.html">Blog</a></li>
+            
+                <li><a href="/projects.html">Projects</a></li>
+            
+        </ul>
+    </nav>
+
+</header>
+    
+    
+    
+    <div id="maincontent">
+        
+            <h1>Simple Static Sites for the Rest of Us</h1>
+        
+        <div class="post-meta"> 
+            
+        </div>
+        <div><p>Every now and then, I (or someone I know) have a need to create a very simple website. Now, regrettably the de facto website builder for the world has for a long time been Wordpress. And that's fine if you need a blog. </p>
+<p>But what if you just need a simple website with just a few pages? Typical examples of this are:</p>
+<ul>
+<li>A portfolio site with a "Work Samples" page, and maybe a page to contact you</li>
+<li>A small business website, which has a "Services" page to tell what you do, and a "team" page about you and your staff. (Examples: a mom-n-pop restaurant, or a bed-and-breakfast, or a yoga studio)</li>
+<li>A product page, like for my <a href="/kawasemi.html">Bluebird Pocket Planner notebook</a>, which I recently launched <sup id="fnref:1"><a class="footnote-ref" href="#fn:1">1</a></sup>.</li>
+</ul>
+<p><strong>If you are a web developer</strong>: No problem! You benefit from a recent renaissance in static site generators, and can build a site in a jiff using any number of site builders like Jekyll, Hugo, Middleman, or literally hundreds of others. You then can serve your static HTML website from Amazon S3, Github Pages, Netlify, or some paid hosting service, and set up a snazzy .com domain name too. </p>
+<p><strong>Not a web developer?</strong> Sucks to be you. The vast majority of the static site generator tools out there are run from the command line, powered by things you've never heard of like Node, Grunt, or Babel. So you reluctantly turn to Wordpress, Wix, or Squarespace where, if you decide you want your own custom .com domain name, you find out you have to pay a monthly subscription of at least $4, $5 or $12 respectively. </p>
+<p>The static site renaissance has left you behind, dear <strike>sucka</strike> reader, the new hotness speeding off in the distance while you settle for what was hot in 2005. Dust off your Nickelback CDs, you'll need a soundtrack. </p>
+<h3 id="so-what-would-a-static-site-generator-for-the-rest-of-us-like-like">So What Would a Static Site Generator for the Rest of Us Like Like?</h3>
+<p>I'm glad you asked. I think it'd be a desktop app. Static site generators (or at least the ones I really like) typically build sites from a collection (or folder) of Markdown files. For example:</p>
+<ul>
+<li>index.md</li>
+<li>about.md</li>
+<li>contact.md</li>
+<li>faq.md</li>
+</ul>
+<p>Since phones aren't the best for manipulating files and folders, I think a Mac/Windows/Linux app would be best to handle this. Depending on the type of site you want to make (a portfolio, a small business website, etc) you'll probably want to choose from a range of templates:</p>
+<ul>
+<li>Personal_Site</li>
+<li>Portfolio</li>
+<li>Photo_Site</li>
+<li>Restaurant</li>
+<li>BnB</li>
+<li>Yoga_Studio</li>
+<li>Etc, etc...</li>
+</ul>
+<p>After selecting your template, your folder of Markdown files is pre-populated, and you can replace the dummy content with your own. And in my perfect world, you also might see a config.txt file where the theme you just chose is declared (e.g. <code>template="Restaurant"</code>. This file might also be a good place to declare or override other things like:</p>
+<p><img alt="Override defaults" src="../static/images/override-defaults.png" /></p>
+<p>This configuration file would also be a great place to declare what you want your navigational menu structure to be. I like nested lists of links (where nested items become dropdown menus):</p>
+<p><img alt="Menu Configuration" src="../static/images/menu-config.png" /></p>
+<p>At this point in our hypothetical web building process, you might press the "build site" button, and all your markdown files are converted to a nice little collection of HTML files that you can then host from wherever you want. And for non-technical users, our hypothetical desktop app should have either FTP support (and documentation), or guidance to host to places like S3 or other commonly used hosting services. </p>
+<h3 id="icing-on-the-cake">Icing on the Cake</h3>
+<p>Other features that I'd include that I personally think would be nice to have.</p>
+<ul>
+<li><a href="http://fletcherpenney.net/multimarkdown/">Multimarkdown</a> for <a href="http://fletcher.github.io/MultiMarkdown-5/tables.html">tables</a> and <a href="http://fletcher.github.io/MultiMarkdown-5/footnotes.html">Footnotes</a> (and <a href="http://www.bigfootjs.com/">Bigfoot.js</a> for those sexy mouse-hover footnotes).</li>
+<li>Table of Contents shortcode, sort of <a href="http://marked2app.com/help/Interface_Features.html#customizingthetableofcontents">like Marked app</a> and <a href="http://ndossougbe.github.io/strapdown/#features">this fork of Strapdown.js</a> have.</li>
+</ul>
+<h3 id="site-generators-worthy-of-mention">Site Generators Worthy of Mention</h3>
+<p>It's possible that there might already be a wonderful static site generator out that is accessible to non-technical users. If you know of one, let me know. But there are a few site generators that I do like, and I'll mention them here:</p>
+<ul>
+<li><a href="https://bitbucket.org/obensonne/poole">Poole</a>: A python-based site generator that does much of what I've described above, and influenced a lot of my ideas here. Unfortunately, it is a command line tool which disqualifies it as being a site generator for non-technical users, I feel.</li>
+<li><a href="https://www.mkdocs.org/">MKdocs</a>: Similar to Poole, but this generator is aimed at making documentation pages. </li>
+<li>Cactus: No longer maintained (to my knowledge), this Mac OSX app was created by a team that includes Koen Bok, the creator of Framer. It <a href="https://thenextweb.com/apps/2014/02/08/sofas-former-co-founder-art-director-relaunch-static-site-generator-cactus-mac/">generated a little bit of buzz</a>. It can still be downloaded from some online repositories <a href="https://www.macupdate.com/app/mac/50357/cactus">like this one</a>, though. </li>
+</ul>
+<div class="footnote">
+<hr />
+<ol>
+<li id="fn:1">
+<p>For my Bluebird Pocket Planner website, I used Poole, which I mentioned in the last section of this page. For the site you are reading right now, I use <a href="https://blog.getpelican.com/">Pelican</a>.&#160;<a class="footnote-backref" href="#fnref:1" title="Jump back to footnote 1 in the text">&#8617;</a></p>
+</li>
+</ol>
+</div></div>
+        <div class="post-info">
+            Posted on July 22, 2018, under categories: <a href='../categories/projects.html'>Projects</a>, and tagged <a href='../tags/web-development.html'>Web Development</a>, <a href='../tags/small-web.html'>Small Web</a>
+        </div>
+        <!-- Additional post-specific content -->
+    </div>
+
+    <footer>
+    <ul>
+        
+            <li><a href="/contact.html">Contact</a></li>
+        
+            <li><a href="/rss.html">RSS</a></li>
+        
+    </ul>
+</footer>
+    
+</body>
+</html>

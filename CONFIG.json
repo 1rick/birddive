@@ -1,0 +1,47 @@
+{
+    "site_name": "BirdDive.com",
+    "site_description": "Flights of Fancy from a Displaced Newfoundlander, in Tokyo",
+    "theme_stylesheet": "KingfisherBlue.css",
+    "base_url": "https://birddive.com",
+    "logo_filename": "birddive-logo-white.svg",
+    "favicon_32x32_filename": "favicon.png",
+    "navigation": [
+        {
+            "label": "About",
+            "link": "/about.html"
+        },
+        {
+            "label": "Blog",
+            "link": "/posts.html"
+        },
+        {
+            "label": "Projects",
+            "link": "/projects.html"
+        }
+    ],
+    "footer_links": [
+        {
+            "label": "Contact",
+            "link": "/contact.html"
+        },
+        {
+            "label": "RSS",
+            "link": "/rss.html"
+        }
+    ],
+    "footer_text": "All rights reserved. Birdpress 2024.",
+    "enable_tableofcontents": true,
+    "enable_footnotes": true,
+    "enable_fenced_codeblocks": true,
+    "include_headings_css": true,
+    "include_table_css": true,
+    "include_button_css": true,
+    "include_hr_css": true,
+    "include_codeblock_css": true,
+    "include_blockquote_css": true,
+    "include_footnotes_css": true,
+    "include_lists_css": true,
+    "publish_category_feeds": true,
+    "publish_tag_feeds": true,  
+    "site_language": "en"
+}
