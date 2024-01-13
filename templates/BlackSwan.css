@@ -5,7 +5,7 @@
     --secondary-color: #696969;  /* Yellowish color for secondary elements */
     --page-background: #252A34;  /* Dark gray background */
     --hero-title-color: #FFFFFF;  /* White for hero titles */
-    --code-background: #grey; /* Dark grey for code blocks */
+    --code-background: grey; /* Dark grey for code blocks */
     --text-color: #E0E0E0;  /* Light gray for text */
     --font-family: 'Georgia', 'Times New Roman', serif;
 }
