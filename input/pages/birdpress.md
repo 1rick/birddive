@@ -102,22 +102,38 @@ Currently there are a few theme options available that you can declare using the
 
 Some people like to list their blog posts on the front page. Some people like to do that on pages like posts.html or blog.html, or news.html. You can put it on any page you wish (but not posts), with this handy shortcode:
 
-```
-{{ insert_blog_posts('all') }}
-```
+`{{ "{{" }} insert_blog_posts('all') {{ "}}" }}`
 
 This code above, when placed in the body text of your markdown file, will list all your blog posts as an unordered list. 
 
-```
-{{ insert_blog_posts(5) }}
-```
+
+`{{ "{{" }} insert_blog_posts(5) {{ "}}" }}`
+
+
 Similarly, the above code will list the 5 most recent posts, or whatever number of posts you decide to specify. 
 
 You can also print the dates, by passing a "true" value for the "show dates" second parameter:
 
-```
-{{ insert_blog_posts('all', true) }}
-```
+
+`{{ "{{" }} insert_blog_posts('all', true) {{ "}}" }}`
+
+
+Categories and Tags can be printed into your pages, by pasting these shortcodes into your markdown: 
+
+`{{ "{{" }} insert_categories(show_rss=False) {{ "}}" }}`
+
+`{{ "{{" }} insert_tags(show_rss=False) {{ "}}" }}`
+
+
+
+Categories and tags can also be printed with their RSS feeds:
+
+`{{ "{{" }} insert_categories(show_rss=True) {{ "}}" }}`
+
+`{{ "{{" }} insert_tags(show_rss=True) {{ "}}" }}`
+
+
+
 
 #### Meta Data Values
 
