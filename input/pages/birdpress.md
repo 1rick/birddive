@@ -92,7 +92,7 @@ The script does the following:
 
 Currently there are a few theme options available that you can declare using the theme_stylesheet option in the CONFIG.json file. 
 
-* KingfisherBlue.css (blue mene on white background)
+* KingfisherBlue.css (blue menu on white background)
 * RedCrane.css (red on white)
 * SnowyEgret.css (white on white)
 * TealDuck.css (green/yellow on black)
@@ -139,9 +139,11 @@ Categories and tags can also be printed with their RSS feeds:
 
 Typical values that you can declare at the top of your post/page are:
 
+```
 title: This is a test post title
 categories: ["Writing", "Side Projects"]
 tags: ["Japan"]
+```
 
 Important notes:
 
@@ -150,12 +152,12 @@ Important notes:
 
 **Other meta data elements:**
 
-* noindex: true  (if you don't want search engines to index this page or post)
-* nofollow: true  (if you don't want search engines to follow links in your posts. More on this property [here](https://www.ilovewp.com/seo-basics-meta-robots-noindexnofollow-explained/))
+* `noindex: true`  (if you don't want search engines to index this page or post)
+* `nofollow: true`  (if you don't want search engines to follow links in your posts. More on this property [here](https://www.ilovewp.com/seo-basics-meta-robots-noindexnofollow-explained/))
 
 **Planned, but not yet functional:*
 
-* draft: true (if you don't want your post or page published yet). Note to self, this is not quite working yet.
+* `draft: true` (if you don't want your post or page published yet). Note to self, this is not quite working yet.
 
 #### Hero images
 
@@ -180,12 +182,12 @@ Note to self on Asian fonts:
 
 To test your website locally, navigate to your output directory and run:
 
-python3 -m http.server 8000 (or whatever port you want to try it out on), then navigate to http://0.0.0.0/8000 to view your site. 
+`python3 -m http.server 8000` (or whatever port you want to try it out on), then navigate to http://0.0.0.0/8000 to view your site. 
 
 To kill this process:
 
-lsof -i :8000 (or whatever port it is)
-and then "kill [PID]"
+`lsof -i :8000` (or whatever port it is)
+and then `kill [PID]`
 
 You can also use VS Code's [Live Server extension](https://www.youtube.com/watch?v=ZfCi0Is9gLU).
 
@@ -193,16 +195,16 @@ You can also use VS Code's [Live Server extension](https://www.youtube.com/watch
 
 Creating links in your markdown files to other posts, pages, or static assets (like images or documents) is straightforward. Here's how you can do it:
 
-* Internal Linking to Posts and Pages: To link to another post or page, use the relative URL path starting from the base URL. For example, if you have a post with the slug my-awesome-post, you can link to it using [My Awesome Post](/posts/my-awesome-post.html). Similarly, for a page, if you have a page with the filename about.md, you can link to it using [About](/about.html). (Note, I'm assuming here that you are viewing the plain text version of this readme file.)
+* Internal Linking to Posts and Pages: To link to another post or page, use the relative URL path starting from the base URL. For example, if you have a post with the slug my-awesome-post, you can link to it using `[My Awesome Post](/posts/my-awesome-post.html)`. Similarly, for a page, if you have a page with the filename about.md, you can link to it using `[About](/about.html)`. 
 * Internal Linking to Static Assets: If you want to include static assets like images or downloadable files, place them in the input/static directory. 
-    * For example, if you have an image named cool-pic.jpg in input/static/images, you can embed it in your markdown post using ![Cool Picture](/static/images/cool-pic.jpg). 
-    * Note that if you want "full bleed" or "full width" images that span beyond the width of the text column across the page, you can use plain HTML to insert your image with a full-bleed class: <img src="../static/images/cool-pic.jpg" alt="" class="full-bleed">  Note that of course, this works best with images of a rectangular shape that can span across your page well. 
-    * For downloadable files like PDFs stored in input/static/files, link them using [Download PDF](/static/files/myfile.pdf).
+    * For example, if you have an image named cool-pic.jpg in input/static/images, you can embed it in your markdown post using `![Cool Picture](/static/images/cool-pic.jpg)`. 
+    * Note that if you want "full bleed" or "full width" images that span beyond the width of the text column across the page, you can use plain HTML to insert your image with a full-bleed class: `<img src="../static/images/cool-pic.jpg" alt="" class="full-bleed">`  Note that of course, this works best with images of a rectangular shape that can span across your page well. 
+    * For downloadable files like PDFs stored in input/static/files, link them using `[Download PDF](/static/files/myfile.pdf)`.
 * For any title that has a colon in it, special care is needed. For example, if you have a title of "Paris: City of Lights but the Food Isn't Great", then that title must be enclosed in quotes. 
 
 Remember, all internal URLs should be relative to the base URL of your site, ensuring that your links remain intact regardless of the domain or subdirectory your site is hosted in.
 
-Of course, linking to external sites is easy, e.g. [google](https://www.google.com).
+Of course, linking to external sites is easy, e.g. `[google](https://www.google.com)`.
 
 #### CSS Extras
 
@@ -236,7 +238,7 @@ If you want pretty buttons, you can use the html below when the buttons css extr
 
 #### Table of Contents ShortCode
 
-If you have table of contents enabled in the config file, you can insert [TOC] at the top of a post or page to generate a table of contents for your page based on the headings. Learn more on the [table of contents extensions documentation page](https://python-markdown.github.io/extensions/toc/).
+If you have table of contents enabled in the config file, you can insert `[TOC]` at the top of a post or page to generate a table of contents for your page based on the headings. Learn more on the [table of contents extensions documentation page](https://python-markdown.github.io/extensions/toc/).
 
 #### Markdown footnotes are enabled. 
 
