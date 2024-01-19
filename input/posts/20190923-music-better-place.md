@@ -8,6 +8,8 @@ tags: ["Parenting"]
 
 **My kids deserve a good soundtrack to their childhood. I don't want it coming from a phone.** 
 
+***
+
 I forgot all about music. For 15 years maybe, in fact. It was that blurry time between my mid-twenties till I hit forty -- that time where real life tends to impose itself. But before all that music was a cornerstone for me. While I never played an instrument, I was an avid listener in my teens. My taste wasn't exotic or gourmet -- just standard 90s alt-rock heavy on Nirvana, Pearl Jam and all.
 
 But that's not what's interesting.
@@ -16,7 +18,7 @@ Remembering back, what's most remarkable is how intertwined music is with... wel
 
 I remember as a kid driving from town after buying my first cassette tape, cruising up Kenmount Road at night, street lamps lighting the pavement orange as me and my family headed back home. The tape was Glass Tiger's *Thin Red Line* [^1]. But the title track I thought, as we drove up the road, was just the perfect driving tune. The actual cassette was a bizarre transparent pink plastic, which was just super cool.
 
-But my point is, we all have this. If you think back to a song or album you loved (or hated) as a kid, you probably have a really strong memory of some people or places to go with it. Maybe it's a mix tape from a girlfriend. Or maybe it's some shitty album your family had around. My own parents didn't have a lot of music around -- my dad had a Loverboy tape (thanks again, Canadian content laws) which I remember was a hard white plastic cassette with a chip missing on the corner.
+But my point is, we all have this. If you think back to a song or album you loved (or hated) as a kid, you probably have a really strong memory of some people or places to go with it. Maybe it's a mix tape from a girlfriend. Or maybe it's some shitty album your family had around. My own parents didn't have a lot of music around -- my dad had a Loverboy tape which I remember was a hard white plastic cassette with a chip missing on the corner.
 
 Anyway, as a relatively new parent myself I wondered about music and my own kids. In the age of Spotify on-demand singles when we've ditched physical media and full album plays, what will be their cassette tape memory?
 

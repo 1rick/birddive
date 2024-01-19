@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Birdpress Static Site Generator - BirdDive.com</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="icon" href="/static/images/favicon.png" type="image/png">
+    <!-- RSS Feed link -->
+    <link rel="alternate" type="application/rss+xml" title="BirdDive.com RSS Feed" href="https://birddive.com/rss.xml">
+</head>
+</head>
+<body>
+    <header>
+    <a href="https://birddive.com"><img class="logo" src="/static/images/birddive-logo-white.svg" alt="logo"></a>
+    <!-- other header elements -->
+    <input id="toggler" class="toggler" type="checkbox">
+        <label for="toggler" class="burger">
+            <span>☰</span>
+        </label>
+    <nav>
+        <ul>
+            
+                <li><a href="/about.html">About</a></li>
+            
+                <li><a href="/posts.html">Blog</a></li>
+            
+                <li><a href="/projects.html">Projects</a></li>
+            
+        </ul>
+    </nav>
+
+</header>
+    
+    
+    
+    <div id="maincontent">
+        
+        <h1>Birdpress Static Site Generator</h1>
+        
+        <div><p>BirdPress is a static site generator that I wrote, with the intention of being simpler than most of the alternatives out there. Let's face it, most of those were written by developers, for developers. I don't consider myself a developer, but I like making websites. And that should be a simple process. BirdPress is a solution I made for me. </p>
+<p><strong>Credit where due</strong>: Props to Chatty G (a.k.a. ChatGPT 4) here as a co-developer, as I really couldn't have done this one my own -- indeed, in the past, I didn't. </p>
+<p>If BirdPress works for anyone else out there, please feel free to use it. Feedback is <a href="/contact.html">welcome</a>.</p>
+<p><strong>Documentation</strong></p>
+<div class="toc">
+<ul>
+<li><a href="#download">Download</a></li>
+<li><a href="#overview">Overview</a></li>
+<li><a href="#quick-start">Quick Start</a></li>
+<li><a href="#more-details">More Details</a><ul>
+<li><a href="#birdpresss-general-structure">BirdPress's General Structure</a></li>
+<li><a href="#themes">Themes</a></li>
+<li><a href="#shortcodes">Shortcodes:</a></li>
+<li><a href="#meta-data-values">Meta Data Values</a></li>
+<li><a href="#hero-images">Hero images</a></li>
+<li><a href="#font-families">Font Families</a></li>
+<li><a href="#viewing-your-website">Viewing Your Website</a></li>
+</ul>
+</li>
+<li><a href="#writing-content-in-markdown-files">Writing Content in Markdown Files</a><ul>
+<li><a href="#css-extras">CSS Extras</a></li>
+<li><a href="#button-usage">Button usage</a></li>
+<li><a href="#markdown-extras">Markdown Extras</a></li>
+<li><a href="#table-of-contents-shortcode">Table of Contents ShortCode</a></li>
+<li><a href="#markdown-footnotes-are-enabled">Markdown footnotes are enabled.</a></li>
+<li><a href="#rss-feeds">RSS Feeds</a></li>
+<li><a href="#license">License</a></li>
+<li><a href="#further-resources">Further Resources</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<h3 id="download">Download</h3>
+<p>Grab the code over on the Githubs:</p>
+<p><a href="https://github.com/1rick/BirdPress" target="_blank" class="button button-primary">BirdPress on Github</a></p>
+<h3 id="overview">Overview</h3>
+<p>BirdPress is similar to some popular Content Management Systems that may or may not rhyme with Birdpress. You can write your content as posts or pages, all stored in your input folder as markdown files. BirdPress has tags, categories, and RSS feeds. Heck, it has RSS feeds for tags and categories too. The nav menu and themes can be configured in CONFIG.json. </p>
+<h3 id="quick-start">Quick Start</h3>
+<p><strong>Step 1</strong>: Install <a href="https://www.python.org/downloads/">python</a>, if it's not already on your system. If you're on Windows, grab it from the Microsoft Store.</p>
+<p><strong>Step 2</strong>: Install the requirements using: <code>pip install -r requirements.txt</code> in your terminal, from the Birdpress root directory (i.e. the same directory that requirements.txt are in). Basically, we're installing PyYaml, markdown, and Jinja2 here. Using a <a href="https://www.youtube.com/watch?v=IAvAlS0CuxI">virtual environment</a> perhaps not a bad idea here.</p>
+<p><strong>Step 3</strong>: Have a look around the input folder as well as at CONFIG.json. And then run <code>python make_site.py</code> to make the site using the dummy content that comes in the input folder, and the default settings in CONFIG.json. If you can take it from here, please do. If not, there are more details below.</p>
+<h3 id="more-details">More Details</h3>
+<h4 id="birdpresss-general-structure">BirdPress's General Structure</h4>
+<p>BirdPress converts Markdown files in an "input" directory to HTML in an "output" directory with a simple command:</p>
+<pre><code>python make_site.py
+</code></pre>
+<p>The input directory that holds your content will look roughly like this:</p>
+<pre><code>|- input
+    |- index.md
+    |- about.mb
+    |- contact.md
+    |- images
+        |- example.png
+        |- logo.png
+        |- favicon.png
+    |- posts
+        |- 20231230-hello-world.md
+        |- 20240115-another-post.md
+</code></pre>
+<p>And when the make_site.py script is run, the resultant HTML is then output as:</p>
+<pre><code>|- output
+    |- index.html
+    |- about.html
+    |- contact.html
+    |- images
+        |- example.png
+        |- logo.png
+        |- favicon.png
+    |- posts
+        |- 20231230-hello-world.html
+        |- 20240115-another-post.html
+    |- rss.xml
+
+</code></pre>
+<p>The script does the following:</p>
+<ul>
+<li>Processes YAML metadata for additional information.</li>
+<li>Supports custom pages, blog posts, categories, and tags.</li>
+<li>Includes a Makefile for easy building and deployment.</li>
+<li>Customizable with Jinja2 templates.</li>
+<li>Generates RSS feeds for posts, as well as for categories and tags. </li>
+</ul>
+<h4 id="themes">Themes</h4>
+<p>Currently there are a few theme options available that you can declare using the theme_stylesheet option in the CONFIG.json file. </p>
+<ul>
+<li>KingfisherBlue.css (blue menu on white background)</li>
+<li>RedCrane.css (red on white)</li>
+<li>SnowyEgret.css (white on white)</li>
+<li>TealDuck.css (green/yellow on black)</li>
+<li>BlackSwan.css (dark black with greys)</li>
+</ul>
+<h4 id="shortcodes">Shortcodes:</h4>
+<p>Some people like to list their blog posts on the front page. Some people like to do that on pages like posts.html or blog.html, or news.html. You can put it on any page you wish (but not posts), with this handy shortcode:</p>
+<p><code>{{ insert_blog_posts('all') }}</code></p>
+<p>This code above, when placed in the body text of your markdown file, will list all your blog posts as an unordered list. </p>
+<p><code>{{ insert_blog_posts(5) }}</code></p>
+<p>Similarly, the above code will list the 5 most recent posts, or whatever number of posts you decide to specify. </p>
+<p>You can also print the dates, by passing a "true" value for the "show dates" second parameter:</p>
+<p><code>{{ insert_blog_posts('all', true) }}</code></p>
+<p>Categories and Tags can be printed into your pages, by pasting these shortcodes into your markdown: </p>
+<p><code>{{ insert_categories(show_rss=False) }}</code></p>
+<p><code>{{ insert_tags(show_rss=False) }}</code></p>
+<p>Categories and tags can also be printed with their RSS feeds:</p>
+<p><code>{{ insert_categories(show_rss=True) }}</code></p>
+<p><code>{{ insert_tags(show_rss=True) }}</code></p>
+<h4 id="meta-data-values">Meta Data Values</h4>
+<p>Typical values that you can declare at the top of your post/page are:</p>
+<pre><code>title: This is a test post title
+categories: [&quot;Writing&quot;, &quot;Side Projects&quot;]
+tags: [&quot;Japan&quot;]
+</code></pre>
+<p>Important notes:</p>
+<ul>
+<li><strong>Dates</strong>: Note that the date is extracted from the markdown filename, which - while not as tidy as keeping them organized in subfolders - is a simpler approach, in my view. Though I realzie some might debate this choice, and indeed a previous version of Birdpress handled date in the Yaml front matter. </li>
+<li><strong>Categories &amp; Tags</strong>: Note the meta-data format here, as this can be a bit finnicky. While comma separated lists can work, I've opted to put them in quotes and in braces, because I ran into occasional issues with multi-word categories and tags, such as "Side Projects"  or "Hot Dogs". The convention in the example above is what I found works best. </li>
+</ul>
+<p><strong>Other meta data elements:</strong></p>
+<ul>
+<li><code>noindex: true</code>  (if you don't want search engines to index this page or post)</li>
+<li><code>nofollow: true</code>  (if you don't want search engines to follow links in your posts. More on this property <a href="https://www.ilovewp.com/seo-basics-meta-robots-noindexnofollow-explained/">here</a>)</li>
+</ul>
+<p>*<em>Planned, but not yet functional:</em></p>
+<ul>
+<li><code>draft: true</code> (if you don't want your post or page published yet). Note to self, this is not quite working yet.</li>
+</ul>
+<h4 id="hero-images">Hero images</h4>
+<p>If you want fancy full-screen hero images at the top of your post or page, simply add a link to your hero image (in static/images) to your meta data:</p>
+<pre><code>hero_image: &quot;../static/images/your_header.jpg&quot;
+</code></pre>
+<p>Note that these hero images are typically wide rectangular things, so as long as you adhere to that shape, you should be fine. </p>
+<h4 id="font-families">Font Families</h4>
+<p>I've opted for pretty simple font options for now, and all those are declared in the theme CSS templates in the root variables. If you're confortable editing those, please feel free.</p>
+<p>Note to self on Asian fonts:</p>
+<ul>
+<li>Japanese: Noto Sans JP</li>
+<li>Korean: Noto Sans KR</li>
+</ul>
+<h4 id="viewing-your-website">Viewing Your Website</h4>
+<p>To test your website locally, navigate to your output directory and run:</p>
+<p><code>python3 -m http.server 8000</code> (or whatever port you want to try it out on), then navigate to http://0.0.0.0/8000 to view your site. </p>
+<p>To kill this process:</p>
+<p><code>lsof -i :8000</code> (or whatever port it is)
+and then <code>kill [PID]</code></p>
+<p>You can also use VS Code's <a href="https://www.youtube.com/watch?v=ZfCi0Is9gLU">Live Server extension</a>.</p>
+<h2 id="writing-content-in-markdown-files">Writing Content in Markdown Files</h2>
+<p>Creating links in your markdown files to other posts, pages, or static assets (like images or documents) is straightforward. Here's how you can do it:</p>
+<ul>
+<li>Internal Linking to Posts and Pages: To link to another post or page, use the relative URL path starting from the base URL. For example, if you have a post with the slug my-awesome-post, you can link to it using <code>[My Awesome Post](/posts/my-awesome-post.html)</code>. Similarly, for a page, if you have a page with the filename about.md, you can link to it using <code>[About](/about.html)</code>. </li>
+<li>Internal Linking to Static Assets: If you want to include static assets like images or downloadable files, place them in the input/static directory. <ul>
+<li>For example, if you have an image named cool-pic.jpg in input/static/images, you can embed it in your markdown post using <code>![Cool Picture](/static/images/cool-pic.jpg)</code>. </li>
+<li>Note that if you want "full bleed" or "full width" images that span beyond the width of the text column across the page, you can use plain HTML to insert your image with a full-bleed class: <code>&lt;img src="../static/images/cool-pic.jpg" alt="" class="full-bleed"&gt;</code>  Note that of course, this works best with images of a rectangular shape that can span across your page well. </li>
+<li>For downloadable files like PDFs stored in input/static/files, link them using <code>[Download PDF](/static/files/myfile.pdf)</code>.</li>
+</ul>
+</li>
+<li>For any title that has a colon in it, special care is needed. For example, if you have a title of "Paris: City of Lights but the Food Isn't Great", then that title must be enclosed in quotes. </li>
+</ul>
+<p>Remember, all internal URLs should be relative to the base URL of your site, ensuring that your links remain intact regardless of the domain or subdirectory your site is hosted in.</p>
+<p>Of course, linking to external sites is easy, e.g. <code>[google](https://www.google.com)</code>.</p>
+<h4 id="css-extras">CSS Extras</h4>
+<p>For most people, the basic styling should suffice (I hope). But I've added a few more options which you can turn on/off in the bottom of the CONFIG.json file per your preference:</p>
+<ul>
+<li>"include_table_css": true (When set to true, any html tables (with a class of "tidyTable") will be a little cleaner. Note that the markdown renderer I'm using doesn't support markdown tables. tidyTableBut I'd recommend using Journalistopia's Tablizer tool to convert a spreadsheet table to a HTML table.)</li>
+<li>include_blockquotes_css: prettier blockquotes</li>
+<li>include_lists_css: prettier lists</li>
+<li>include_codeblocks_css: prettier codeblocks.</li>
+<li>include_footnotes_css: prettier footnote markers for markdown style footnotes.</li>
+<li>include_hr_css: a prettier horizontal rule.</li>
+<li>include_button_css: true, (when set to true, this gives fancy 
+buttons for you to use for things like downloads or whatever I guess.)</li>
+</ul>
+<h4 id="button-usage">Button usage</h4>
+<p>If you want pretty buttons, you can use the html below when the buttons css extra is set to true:</p>
+<pre><code>&lt;a href=&quot;your-link-1.html&quot; class=&quot;button button-primary&quot;&gt;Primary Solid&lt;/a&gt;
+
+&lt;a href=&quot;your-link-2.html&quot; class=&quot;button button-secondary&quot;&gt;Secondary Solid&lt;/a&gt;
+
+&lt;a href=&quot;your-link-3.html&quot; class=&quot;button button-primary-outline&quot;&gt;Primary Outlined&lt;/a&gt;
+
+&lt;a href=&quot;your-link-4.html&quot; class=&quot;button button-secondary-outline&quot;&gt;Secondary Outlined&lt;/a&gt;
+
+</code></pre>
+<h4 id="markdown-extras">Markdown Extras</h4>
+<h4 id="table-of-contents-shortcode">Table of Contents ShortCode</h4>
+<p>If you have table of contents enabled in the config file, you can insert <code>[TOC]</code> at the top of a post or page to generate a table of contents for your page based on the headings. Learn more on the <a href="https://python-markdown.github.io/extensions/toc/">table of contents extensions documentation page</a>.</p>
+<h4 id="markdown-footnotes-are-enabled">Markdown footnotes are enabled.</h4>
+<p>As with table of contents above, if markdown footnotes are enabled in the config file, you can use them in Birdpress. Learn more over on the footnotes <a href="https://python-markdown.github.io/extensions/footnotes/">extensions page</a>.</p>
+<h4 id="rss-feeds">RSS Feeds</h4>
+<p>RSS feeds are awesome, so Birdpress has an RSS feed for your posts. Also, if you enabled in the config file, (i.e. if "publish_category_feeds" or "publish_tag_feeds" are set to true) then those feeds will be published, and will be listed on that category's or tag's page. In the example input, you'll see an RSS.md page which I think is a good way to present your feed, and it includes shortcodes to list category and tag feeds. Note that the feed is exposed in the site head by default. </p>
+<h4 id="license">License</h4>
+<p>MIT License</p>
+<h4 id="further-resources">Further Resources</h4>
+<p><strong>Color Tools</strong>:</p>
+<ul>
+<li><a href="https://colorhunt.co/">colorhunt.co</a> - Lots of great color palettes to get inspiration from.</li>
+<li><a href="https://nipponcolors.com">NipponColors.com</a> - "Japanese" colors</li>
+<li><a href="https://0to255.com/">0to255.com</a> - A handy tool if you need to adjust a color to be darker or lighter, for contrast purposes. </li>
+</ul>
+<p><strong>Tables</strong>:</p>
+<ul>
+<li><a href="https://tableizer.journalistopia.com/">Tableizer</a> - Make tables easily by copying from spreadsheet into this tool. </li>
+</ul>
+<p><strong>RSS</strong></p>
+<ul>
+<li><a href="https://rknight.me/blog/please-expose-your-rss/">Please expose your RSS</a></li>
+</ul>
+<p><strong>Hosting Suggestions</strong></p>
+<p>There are lots of places that you can host your HTML once it has been output. I'll list a few below, though of course your preference will largely depend on your experience. I've not tested most of these, but they seem ok:</p>
+<ul>
+<li>Github Pages</li>
+<li>Netlify</li>
+<li>Surge.sh</li>
+<li>NearlyFreeSpeech.net</li>
+<li>000webhost.com</li>
+<li>infinityfree.com</li>
+<li>97cents.net</li>
+<li><a href="https://www.fastmail.help/hc/en-us/articles/1500000280141">Fastmail</a></li>
+</ul></div>
+        <!-- Additional page-specific content -->
+    </div>
+
+    <footer>
+    <ul>
+        
+            <li><a href="/contact.html">Contact</a></li>
+        
+            <li><a href="/rss.html">RSS</a></li>
+        
+    </ul>
+</footer>
+    
+</body>
+</html>

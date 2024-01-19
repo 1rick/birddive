@@ -22,16 +22,12 @@ The physical version is currently sold out, but printable versions are still ava
 **Printable PDF versions of Bluebird:**
 
 <ul>
-  <li><img src="..static/images/pdf-blue.png" alt="pdf icon"><a href="assets/bluebird_a4.pdf">Weekly Spread, A4 size</a></li>  
-  <li><img src="..static/images/pdf-blue.png" alt="pdf icon"><a href="assets/bluebird_lettersize.pdf">Weekly Spread, Lettersize</a></li> 
-  <li><img src="..static/images/pdf-blue.png" alt="pdf icon"><a href="assets/a4-print-on-2pg-double-sided.pdf">Foldable A4 quatro</a> (folds in 1/4s to A6 size)</li>   
+  <li><a href="/static/assets/bluebird_a4.pdf">Weekly Spread, A4 size </a> (PDF), 396kb</li>  
+  <li><a href="/static/assets/bluebird_lettersize.pdf">Weekly Spread, Lettersize</a> (PDF, 395kb)</li> 
+  <li><a href="assets/a4-print-on-2pg-double-sided.pdf">Foldable A4 quatro</a> (PDF, 691kb; folds in 1/4s to A6 size)</li>   
 </ul>
 
 
-
-
-
-<button type="button" class="btn btn-secondary btn-lg" disabled>Closed, Back Soon!</button>
 
 
 <!--
