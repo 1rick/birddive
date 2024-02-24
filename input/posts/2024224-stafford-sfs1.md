@@ -2,20 +2,20 @@
 
 title: "The Stafford SF-S1: A Rare Japanese Replica of the Iconic Nirvana Unplugged Guitar?"
 categories: ["Music", "Japan"]
-tags: ["The Stafford SFS1"]
+tags: ["The Stafford SFS1", "Guitar"]
 hero_image: "../static/images/stafford-sf-s1-guitar.JPG"
 series: ["The Stafford SFS1"]
 
 ---
 
 
-As a child of the 90s, Nirvana was my high school soundtrack. I wore out MTV Unplugged album, the one where Kurt Cobain played a rare Martin D18-e, the now iconic guitar that went on to be the most expensive guitar ever sold at six million dollars. So when I recently took up guitar as a new pandemic hobby, the songs from the Unplugged album made for great beginner practice for me. A friend had lent me a Morris guitar to try [^morris], which played wonderfully, but it had a sunburst finish that I just didn't like. 
+As a child of the 90s, Nirvana was my high school soundtrack. I wore out the MTV Unplugged album, the one where Kurt Cobain played a rare Martin D18-e, the now iconic guitar that went on to be the most expensive guitar ever sold at six million dollars. So when I recently took up guitar as a new pandemic hobby, the songs from the Unplugged album made for great beginner practice for me. A friend had lent me a Morris guitar to try [^morris], which played wonderfully, but it had a sunburst finish that I just didn't like. 
 
-So when I started seeking out a new instrument, I was somehow paradoxically looking for a guitar that was not too pricy, and yet resembled the most expensive guitar in history, the D18-e.  
+So when I started seeking out a new instrument, I was somehow paradoxically looking for a guitar that was not too pricy, and yet resembled the most expensive guitar in history, the D18-e. 
 
-The Martin D18-e was a famously weird guitar for the normally traditional Martin Guitar Company to make, as it was an electified version of the their regular acoustic D18. The D18-e stands out for having electric pickups on the top and bottom of the soundhole, as well as three gaudy white knobs on the spruce top body. 
+The Martin D18-e was a famously weird guitar for the normally traditional Martin Guitar Company to make, as it was an electrified version of the their regular acoustic D18. The D18-e stands out for having two external electric pickups on the top and bottom of the soundhole, as well as three gaudy white knobs on the spruce top body. 
 
-For many Nirvana fans, a more common route to owning a D18-e replica would be to simply mod a D18*ish* guitar (because D18s are pretty 'spensive) by adding pickups, knobs, and a switch. The NirvanaGuitar Youtube channel has a [great video overview of a mod they did to a Sigma DM3](https://www.youtube.com/watch?v=C6cCEoC5Tco), but as much as I like the Unplugged D18-e, I don't really want to hack up any guitars too much [^nirvanaguitars]. 
+For many Nirvana fans, a more common route to owning a D18-e replica would be to simply mod a D18-ish guitar (because D18s are pretty 'spensive) by adding pickups, knobs, and a switch. The NirvanaGuitar Youtube channel has a [great video overview of a mod they did to a Sigma DM3](https://www.youtube.com/watch?v=C6cCEoC5Tco), but as much as I like the Unplugged D18-e, I don't really want to hack up any guitars too much [^nirvanaguitars]. 
 
 As it turns out, there was a rather affordable alternative to a D18-e right here in Japan that most people don't know about. In the early 2000s, Japanese instrument company Kurasawa Gakki made a guitar that is often referred to as a D18-e replica:   
   
@@ -28,11 +28,11 @@ There's really not much information on these guitars online (in either English o
 
 ### The Stafford SF-S1 Guitar: The Unofficial Documentation
 
-Japan-based Kurasawa Gakki has actually been [a distributor of Martin guitars since 1989](https://www.kurosawagakki.com/company/history.html) [^kurosawa], and their while Stafford line is still going strong here, the SF-S1 has been out of production for years. And while it is often referred to as a "Cobain D18-e replica," I assert here that it is not. Here's why:
+Japan-based Kurasawa Gakki has actually been [a distributor of Martin guitars since 1989](https://www.kurosawagakki.com/company/history.html) [^kurosawa], and while their Stafford line is still going strong here, the SF-S1 has been out of production for years. Although it is often referred to as a "Cobain D18-e replica," I assert here that it is not. Here's why:
 
 Like the D18-e, this SF-S1 guitar has dual pickups above and below the soundhole. I've seen these referred to as humbuckers in multiple places online, and in [a couple](https://aucview.aucfan.com/yahoo/k1090493351/) [of places](https://aucview.aucfan.com/yahoo/u35091777/) as mini-humbuckers, so that's probably the case. The pickup selector is a three-way switch (neck only / both / bridge only) [^MTV].
 
-Also like the D18-e, the SF-S1 has a a spruce top and mahogany body. But that's about where the similarities end, because unlike the three-knobbed D18-e, the Stafford guitar has *four* knobs: two for the volume and two for tone of each pickup. And not only that, these four knobs are not giant white appliance-like knobs, but small brown Gibson-style knobs. 
+Also like the D18-e, the SF-S1 has a spruce top and mahogany body. But that's about where the similarities end, because unlike the three-knobbed D18-e, the Stafford guitar has *four* knobs: two for the volume and two for tone of each pickup. And not only that, these four knobs are not giant white appliance-like knobs, but small brown Gibson-style knobs. 
 
 I have a detailed comparison below, but I would argue that the three white knobs are such a definining visual characteristic of the Unplugged D18-e, that without them any imitation would fall short. In truth, a feature-by-feature comparison shows that the SF-S1 is actually a sort of hybrid between a D18-e and its less famous but also rare cousin D28-e. And certainly at a glance, it looks far more like a D28-e, with its four Gibson style knobs:
 
