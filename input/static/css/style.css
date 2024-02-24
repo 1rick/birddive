@@ -3,7 +3,7 @@
 :root {
     --primary-color: #00AEEF;
     --secondary-color: #Fb9543;
-    --page-background: ivory;
+    --page-background: "ivory";
     --code-background: #333; /* Dark grey for code blocks */
     --hero-title-color: white; 
     --menu-text-color: white; 

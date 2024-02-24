@@ -1,9 +1,9 @@
 {
     "site_name": "BirdDive.com",
-    "site_description": "Flights of Fancy from a Displaced Newfoundlander, in Tokyo",
+    "site_description": "Flights of fancy from a Newfoundlander living in Tokyo",
     "theme_stylesheet": "KingfisherBlue.css",
     "base_url": "https://birddive.com",
-    "logo_filename": "birddive-logo-white.svg",
+    "logo_filename": "birddive-logo-ivory.svg",
     "favicon_32x32_filename": "favicon.png",
     "navigation": [
         {
