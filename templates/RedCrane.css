@@ -6,7 +6,7 @@
     --primary-color: #D32F2F; /* Japanese Red */
     --secondary-color: #757575; /* Grey */
     --page-background: #FFFFFF; /* White background */
-    --code-background: #333; /* Dark grey for code blocks */
+    --code-background: #cccccc; /* Light grey for code blocks */
     --hero-title-color: white;
     --menu-text-color: white;
     --font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;

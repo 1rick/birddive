@@ -5,7 +5,7 @@
     --secondary-color: #1B262C; /* Dark Blue for better contrast */
     --page-background: #F8F9FA; /* Soft White */
     --hero-title-color: #FFFFFF; /* Pure White */
-    --code-background: #1B262C; /* Dark blue for code blocks */
+    --code-background: #cccccc; /* Light grey for code blocks */
     --menu-text-color: #0F4C75;
     --text-color: #1B262C; /* Dark text color for readability */
     --font-family: "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
