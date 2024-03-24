@@ -12,7 +12,7 @@ I'm not great with labels, but if you need one I might be a [writer](/writing.ht
 ### Things that interest me right now:
 
 *   [Photography](/photography.html)
-*   Web design
+*   [Web design / Development](/tags/web-development.html)
 *   [Guitar](/tags/guitar.html)
 *   Cooking
 
