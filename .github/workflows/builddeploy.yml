@@ -3,27 +3,28 @@ name: Build and Deploy Site
 on:
   push:
     branches:
-      - master  # Trigger the workflow on changes to the master branch
+      - master  # Triggers the workflow on changes to the master branch
 
 jobs:
   build-and-deploy:
     runs-on: ubuntu-latest  # Specifies the runner environment
 
     steps:
-    - uses: actions/checkout@v2  # Checks out your repository under $GITHUB_WORKSPACE
+    - name: Checkout code
+      uses: actions/checkout@v2
       
     - name: Set up Python
-      uses: actions/setup-python@v2  # Sets up Python
+      uses: actions/setup-python@v2
       with:
         python-version: '3.x'  # Specify the Python version
 
     - name: Install dependencies
-      run: pip install -r requirements.txt  # Install dependencies
+      run: pip install -r requirements.txt
 
     - name: Build site
-      run: python make_site.py  # Run your build command
+      run: python make_site.py
 
-    - name: List output directory
+    - name: List output directory contents
       run: ls -la output
 
     - name: Deploy to gh-pages
@@ -31,5 +32,4 @@ jobs:
       with:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_dir: ./output
-        force_orphan: true
-
+        force_orphan: true  # Consider setting this to false if you want to retain commit history
