@@ -16,7 +16,7 @@ But that's not what's interesting.
 
 Remembering back, what's most remarkable is how intertwined music is with... well... remembering. I have these really strong musical "memory markers." I mean really vivid, close-my-eyes-and-I'm-right-back-there memories.
 
-I remember as a kid driving from town after buying my first cassette tape, cruising up Kenmount Road at night, street lamps lighting the pavement orange as me and my family headed back home. The tape was Glass Tiger's *Thin Red Line* [^1]. But the title track I thought, as we drove up the road, was just the perfect driving tune. The actual cassette was a bizarre transparent pink plastic, which was just super cool.
+I remember as a kid on car coming home from town after buying my first cassette tape, cruising up Kenmount Road at night, street lamps lighting the pavement orange as me and my family headed back home. The tape was Glass Tiger's *Thin Red Line* [^1]. But the title track I thought, as we drove up the road, was just the perfect driving tune. The actual cassette was a bizarre transparent pink plastic, which was just super cool.
 
 But my point is, we all have this. If you think back to a song or album you loved (or hated) as a kid, you probably have a really strong memory of some people or places to go with it. Maybe it's a mix tape from a girlfriend. Or maybe it's some shitty album your family had around. My own parents didn't have a lot of music around -- my dad had a Loverboy tape which I remember was a hard white plastic cassette with a chip missing on the corner.
 
