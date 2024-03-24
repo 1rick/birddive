@@ -12,6 +12,9 @@ jobs:
     steps:
     - uses: actions/checkout@v2  # Checks out your repository under $GITHUB_WORKSPACE
 
+    - name: Print working directory
+      run: pwd
+      
     - name: Set up Python
       uses: actions/setup-python@v2  # Sets up Python
       with:
