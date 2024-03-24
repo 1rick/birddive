@@ -22,7 +22,7 @@ def copy_static(src_dir, dest_dir):
     print(f"Static content copied from {src_dir} to {dest_dir}.")
 
 def copy_cname(src_dir, dest_dir):
-    cname_file = 'CNAME'
+    cname_file = 'CNAME.txt'  
     src_cname_path = os.path.join(src_dir, cname_file)
 
     if os.path.exists(src_cname_path):
@@ -37,4 +37,4 @@ if __name__ == '__main__':
     root_output_dir = 'output'
 
     copy_static(input_static_dir, output_static_dir)
-    copy_cname('input', root_output_dir)  # Assumes CNAME is in the 'input' directory
+    copy_cname('input', root_output_dir)  
