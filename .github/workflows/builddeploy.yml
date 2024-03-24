@@ -24,11 +24,11 @@ jobs:
     - name: Build site
       run: python make_site.py
 
-    - name: List output directory contents
-      run: ls -la output
-
     - name: Copy CNAME to output directory
       run: cp CNAME.txt output/CNAME  # Adjust the source file name if necessary
+
+    - name: List output directory contents
+      run: ls -la output
 
     - name: Deploy to gh-pages
       uses: peaceiris/actions-gh-pages@v3
