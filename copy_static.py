@@ -21,15 +21,13 @@ def copy_static(src_dir, dest_dir):
 
     print(f"Static content copied from {src_dir} to {dest_dir}.")
 
-def copy_cname(src_dir, dest_dir):
-    cname_file = 'CNAME.txt'  
-    src_cname_path = os.path.join(src_dir, cname_file)
-
-    if os.path.exists(src_cname_path):
-        shutil.copy2(src_cname_path, dest_dir)
-        print(f"{cname_file} file copied from {src_dir} to {dest_dir}.")
+def copy_cname(src_file, dest_dir):
+    if os.path.exists(src_file):
+        dest_file = os.path.join(dest_dir, 'CNAME')  
+        shutil.copy2(src_file, dest_file)
+        print(f"{src_file} copied to {dest_file}.")
     else:
-        print(f"{cname_file} file does not exist in {src_dir}.")
+        print(f"{src_file} does not exist.")
 
 if __name__ == '__main__':
     input_static_dir = 'input/static'
@@ -37,4 +35,4 @@ if __name__ == '__main__':
     root_output_dir = 'output'
 
     copy_static(input_static_dir, output_static_dir)
-    copy_cname('input', root_output_dir)  
+    copy_cname('input/CNAME.txt', root_output_dir)  
