@@ -13,7 +13,7 @@ I'm not great with labels, but if you need one I might be a [writer](/writing.ht
 
 *   [Photography](/photography.html)
 *   Web design
-*   Guitar
+*   [Guitar](/tags/guitar.html)
 *   Cooking
 
 ### Recent Writings
