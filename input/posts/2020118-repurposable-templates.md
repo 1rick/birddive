@@ -8,7 +8,7 @@ tags: ["Web Development"]
 
 
 
-I'm still knocking around the idea of a (web-based?) static site generator in my head. And as part of that mental exercise, I thought I'd start at the end and work backwards with what the output HTML should look like. What would a versatile web template look like for a personal portfolio or small business site? 
+I'm still knocking around the idea of a simpler static site generator in my head. And as part of that mental exercise, I thought I'd start at the end and work backwards with what the output HTML should look like. What would a versatile web template look like for a personal portfolio or small business site? 
 
 **TL;DR:** [This is what I came up with.](https://1rick.github.io/mejiro-theme/)
 
