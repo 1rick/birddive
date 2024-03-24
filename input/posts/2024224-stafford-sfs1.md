@@ -11,7 +11,7 @@ series: ["The Stafford SFS1"]
 
 As a child of the 90s, Nirvana was my high school soundtrack. I wore out the MTV Unplugged album, the one where Kurt Cobain played a rare Martin D18-e, the now iconic guitar that went on to be the most expensive guitar ever sold at six million dollars. So when I recently took up guitar as a new pandemic hobby, the songs from the Unplugged album made for great beginner practice for me. A friend had lent me a Morris guitar to try [^morris], which played wonderfully, but it had a sunburst finish that I just didn't like. 
 
-So when I started seeking out a new instrument, I was somehow paradoxically looking for a guitar that was not too pricy, and yet resembled the most expensive guitar in history, the D18-e. 
+So when I started seeking out a new instrument, I was somehow paradoxically looking for a guitar that was not too pricy, and at the same time resembled the most expensive guitar in history, the D18-e. 
 
 The Martin D18-e was a famously weird guitar for the normally traditional Martin Guitar Company to make, as it was an electrified version of the their regular acoustic D18. The D18-e stands out for having two external electric pickups on the top and bottom of the soundhole, as well as three gaudy white knobs on the spruce top body. 
 
