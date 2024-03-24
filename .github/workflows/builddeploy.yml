@@ -27,7 +27,9 @@ jobs:
       run: ls -la output
 
     - name: Deploy to gh-pages
-      uses: peaceiris/actions-gh-pages@v3  # Deploys to the gh-pages branch
+      uses: peaceiris/actions-gh-pages@v3
       with:
-        github_token: ${{ secrets.GITHUB_TOKEN }}  # GitHub token for authentication
-        publish_dir: ./output  # Directory to publish
+        github_token: ${{ secrets.GITHUB_TOKEN }}
+        publish_dir: ./output
+        force_orphan: true
+
