@@ -6,7 +6,7 @@ tags: ["Design"]
 
 ---
 
-A while back I worked on an Agile development team, where we planned our week of work (our weekly sprint) on a kanban board. The board contained three columns: 'to do', 'in progress', and 'done', starting out with a bunch of tasks on post-it notes in the 'to do' column. Team members do tasks one-by-one, until they're all moved to the 'done' column by the end of the week. In addition to managing daily tasks in this way, I really liked the weekly planning and review that happened before and after the week of work, as well as the notion of limiting work in progress to one task before moving on to the next one.
+A while back I worked on an Agile development team, where we planned the work of our weekly sprint on a Kanban board. The board contained three columns: 'to do', 'in progress', and 'done', starting out with a bunch of tasks on post-it notes in the 'to do' column. Team members do tasks one-by-one, until they're all moved to the 'done' column by the end of the week. In addition to managing daily tasks in this way, I really liked the weekly planning and review that happened before and after the week of work, as well as the notion of limiting work in progress to one task before moving on to the next one.
 
 Kanban boards are for teams. But I've often wondered, is there a way to have such a planning system in my pocket? Of course, the standard response to that question - and my own response for quite some time - was "There's an app for that!" [^1] But over time our smartphones have become a far more intense battleground for our attention. Install whatever task planning app you like, and Facebook and countless others will still be right next to it trying to pry your eyes and your time away from your greatest ambitions. 
 
