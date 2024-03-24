@@ -11,12 +11,6 @@ jobs:
 
     steps:
     - uses: actions/checkout@v2  # Checks out your repository under $GITHUB_WORKSPACE
-
-    - name: Print working directory
-      run: pwd
-      
-    - name: List files in the working directory
-      run: ls -la
       
     - name: Set up Python
       uses: actions/setup-python@v2  # Sets up Python
@@ -27,7 +21,7 @@ jobs:
       run: pip install -r requirements.txt  # Install dependencies
 
     - name: Build site
-      run: python make-site.py  # Run your build command
+      run: python make_site.py  # Run your build command
 
     - name: Deploy to gh-pages
       uses: peaceiris/actions-gh-pages@v3  # Deploys to the gh-pages branch
