@@ -78,7 +78,7 @@ Given the close relationship of Kurasawa Gakki to Martin at the time this guitar
 
 In my research, I've seen another case of Kurasawa Gakki doing quasi-replicas of a rare model guitar, and that's their [apparent remake of a Gibson B-25](https://ameblo.jp/maj7-guitars/entry-12322104224.html),  the Stafford SLG360.
 
-I should also note that there are a three headstock logo variants for the Stafford SF-S1. In the picture below from left to right: there's the boring one which my guitar has, there's a sort of cursive scripty one, and then there is the Martin-wannabe-logo. 
+I should also note that there are three headstock logo variants for the Stafford SF-S1. In the picture below from left to right: there's the boring one which my guitar has, there's a sort of cursive scripty one, and then there is the Martin-wannabe-logo. 
 
 ![Stafford SF-S1 headstocks](/static/images/stafford-headstocks.jpg)
 
