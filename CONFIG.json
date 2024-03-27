@@ -27,6 +27,10 @@
         {
             "label": "RSS",
             "link": "/rss.html"
+        },
+        {
+            "label": "Hatched by Birdpress",
+            "link": "/birdpress.html"
         }
     ],
     "footer_text": "All rights reserved. Birdpress 2024.",
