@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>Thoughts on Repurposable Web Templates - BirdDive.com</title>
+    <link rel="stylesheet" href="/static/css/style.css">
+    <link rel="icon" href="/static/images/favicon.png" type="image/png">
+    <!-- RSS Feed link -->
+    <link rel="alternate" type="application/rss+xml" title="BirdDive.com RSS Feed" href="https://birddive.com/rss.xml">
+</head>
+</head>
+<body>
+    <header>
+    <a href="https://birddive.com"><img class="logo" src="/static/images/birddive-logo-ivory.svg" alt="logo"></a>
+    <!-- other header elements -->
+    <input id="toggler" class="toggler" type="checkbox">
+        <label for="toggler" class="burger">
+            <span>☰</span>
+        </label>
+    <nav>
+        <ul>
+            
+                <li><a href="/about.html">About</a></li>
+            
+                <li><a href="/posts.html">Blog</a></li>
+            
+                <li><a href="/projects.html">Projects</a></li>
+            
+        </ul>
+    </nav>
+
+</header>
+    
+    
+    
+    <div id="maincontent">
+        
+            <h1>Thoughts on Repurposable Web Templates</h1>
+        
+        <div class="post-meta"> 
+            
+        </div>
+        <div><p>I'm still knocking around the idea of a simpler static site generator in my head. And as part of that mental exercise, I thought I'd start at the end and work backwards with what the output HTML should look like. What would a versatile web template look like for a personal portfolio or small business site? </p>
+<p><strong>TL;DR:</strong> <a href="https://1rick.github.io/mejiro-theme/">This is what I came up with.</a></p>
+<p>Ideally a repurposable layout should be simple enough that it can work for almost any content. But what are the design choices that lead to a "repurposable" template? I'll touch on a few of those below.</p>
+<p>As part of creating this little template, I had to study up on my CSS understanding a little bit, and dive into things like Flexbox and Grid that I hadn't really looked closely at before. In the interests of sharing, here are a few of the portions of CSS that I really liked, along with some comments on why I'm using them. For this template, I also avoided using any Javascript, partially because I need to study up on it, and also because I really want to stay as simple as possible. </p>
+<h3 id="1-root-variables-for-setting-theme-colors">1. Root variables for setting theme colors</h3>
+<p>I'm sure any web designer worth their salt knows about these, and yet I rarely see them at the top of any CSS files I encounter in the wild. I'll use these to set my document colors, just so that they're easy to for any users to change (i.e. more "repurposable"), and in the interests of allowing for light and dark themes, I'll establish an easily swappable color-background and color-foreground variable as well. </p>
+<pre><code>
+:root {
+  --primary-color: #00AEEF;
+  --secondary-color: #cc5500;
+  --page-background: ivory;
+  --page-foreground: #333;
+  }
+
+</code></pre>
+
+<h3 id="2-one-column-layout-with-a-limited-line-length-for-optimal-readability">2. One-Column layout, with a limited line length for optimal readability</h3>
+<p>I've often seen complex template layouts created with multi-column content block, and those are perfectly fine -- but if you want to re-use them later, it might be tricky to make your content fit. So for this template, I'll stick to one-column, and in the interests of readability, let's not run it too wide. The <a href="https://baymard.com/blog/line-length-readability">50 to 70 characters per line rule</a> is a best practice I see broken way too often on the web. And in the past I've used max-width of containers to enforce it, but thanks to Jeremy Thomas's brilliant little <em><a href="https://jgthms.com/web-design-in-4-minutes/">Web Design in 4 mins</a></em>, let's use his recommendation of max-width: 50em along with some padding. We can set a line height of 1.5, and <a href="https://allthingssmitty.com/2016/12/26/add-line-height-to-body-copy/">leave it unitless</a> in case any dependencies end up using different units. </p>
+<pre><code>
+#maincontent {
+    margin: 0 auto;
+    max-width: 50em;
+    line-height: 1.5;
+    padding: 4em 1em;
+    color: var(--page-foreground);
+}
+</code></pre>
+
+<h3 id="3-full-bleed-images-by-default-with-option-for-narrow-image-constrained-within-the-narrow-body-column">3. Full-bleed images by default, with option for narrow image constrained within the narrow body column</h3>
+<p>While I like the 50em width limitation for my body text, it's really nice to be able to break that constraint with images. So by default, let's make images full bleed, but retain the option of a "narrow_image" class to keep within the boundary. To do this, let's take a page from Kilian Valkov's and use the not() pseudo class to basically say, "anything that isn't an image or video within this <em>maincontent</em> container, keep it to 50rem wide". </p>
+<pre><code>
+#maincontent > *:not(img):not(video) { 
+    max-width: 50rem;
+    margin: auto;
+  }
+
+#maincontent img {
+    max-width: 100%;
+    display: block;
+    margin: 3rem auto;
+}
+</code></pre>
+
+<p>For images that you don't want to extend for the full width, let's add that class as well using media queries. Because after all, on mobile, this narrow column will extend full width.</p>
+<pre><code>
+
+@media screen and (min-width:800px) {
+
+    #maincontent .narrow_image {
+        max-width: 50rem;
+    }
+}
+</code></pre>
+
+<h3 id="4-minimal-interference-with-header-background-cover-image">4. Minimal interference with header background cover image</h3>
+<p>I like putting white text on darkened photos in my header sections, but applying dark overlays comes at the cost of fading the photo into the... um... background. A happy medium is applying a bit of a text shadow to assist with the contrast. And this leaves the photo a little more visible by default. The 'screen' background blending mode seems to darken the photo the least. If you need a little more, try 'overlay' or 'multiply'. </p>
+<pre><code>
+.hero {
+    background-image: url("../images/header.jpg"), linear-gradient(rgba(0,0,0,0.2),rgba(0,0,0,0.2));
+    background-blend-mode: screen;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    line-height: 1.2;
+    padding: 10vw 2em;
+    text-align: center;
+  }
+</code></pre>
+
+<h3 id="closing-thoughts">Closing thoughts</h3>
+<p>You can see the template in action <a href="https://1rick.github.io/mejiro-theme/">here</a>. The files, if you'd like to download and mess about with them yourself, are <a href="https://github.com/1rick/mejiro-theme/tree/gh-pages">on Github</a>. I didn't intend for this to look like the old standard Wordpress Twenty Twenty theme, but it does remind me of that a little bit. As for the nav bar, that was a little tricky as I did start with a collapsed mobile view (borrowing some ideas from <a href="https://www.youtube.com/watch?v=y4N-UeK0cJw">here</a>), with the media query declaring the "desktop view" for 800+ pixels. But I think it works well -- and there's no javascript involved.</p></div>
+        <div class="post-info">
+            <p>Posted on November 08, 2020 under categories: <a href='../categories/side-projects.html'>Side Projects</a> and tagged <a href='../tags/web-development.html'>Web Development</a></p>
+            
+        </div>
+        <!-- Additional post-specific content -->
+    </div>
+
+    <footer>
+    <ul>
+        
+            <li><a href="/contact.html">Contact</a></li>
+        
+            <li><a href="/rss.html">RSS</a></li>
+        
+            <li><a href="/birdpress.html">Hatched by Birdpress</a></li>
+        
+    </ul>
+</footer>
+    
+</body>
+</html>
