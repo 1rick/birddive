@@ -18,7 +18,7 @@ I'm not great with labels, but if you need one I might be a [writer](/writing.ht
 
 ### Recent Writings
 
-{{ insert_blog_posts(5) }}
+{{ insert_blog_posts(6) }}
 
 [Read more](/posts.html)
 

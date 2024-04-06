@@ -29,7 +29,7 @@ Now of course, the big difference between this and the D-18 is that the Stafford
 
 ### Black Knob Labels
 
-As for the black ring labels that go underneath the knobs, this was also a big challenge. In the end, I actually just printed them up on regular computer paper and then sprayed on a layer of clear-coat. I didn't want to just apply the paper under the knobs, because they wouldn't have the right thickness, so I managed to find a 30mm O-ring in the plumbing section of my local hardware store which I could them stick the labels on. Being 5mm wider than the 25mm knob, this effectively just put a 2.5mm black border around the outside, which judging from pictures of the DD18-e, was just about right. 
+As for the black ring labels that go underneath the knobs, this was also a big challenge. In the end, I actually just designed something [^1] and then printed them up on regular computer paper and then sprayed on a layer of clear-coat. I didn't want to just apply the paper under the knobs, because they wouldn't have the right thickness, so I managed to find a 30mm O-ring in the plumbing section of my local hardware store which I could them stick the labels on. Being 5mm wider than the 25mm knob, this effectively just put a 2.5mm black border around the outside, which judging from pictures of the D18-e, was just about right. 
 
 From there, some sparse bits of double-sided tape could stick them onto the body. The result is below. It was a crude solution, but I'm actually pretty happy with it. Though I am keeping the original Gibson knobs should I ever decide to part with this guitar down the road.  
 
@@ -58,3 +58,5 @@ So what do I think of my new SF-S1 guitar? Overall, I think it plays pretty well
 And so for now, I'll stick with it. If I grow out of it and want something better later, I'll cross that bridge when I get there. 
 
 But everything kinda hinges on the Bartolini pickup, which I'm hoping to sort out in the next month or so. Fingers crossed!
+
+[^1]: If anyone wants the PDF of my design, [get in touch](/contact.html) with me. Printing it was a little tricky, because while my design is for an A4 sheet, most home printers do not print right to the border. So there was some trial and error in printing this a little bigger to compensate for the printer shrinking it down again. In the end, I think I had 34mm diameter in my design, which my printer then shrunk to the right size.
