@@ -8,7 +8,7 @@ series: ["The Stafford SFS1"]
 
 ---
 
-In our [last episode](/posts/2024224-stafford-sfs1.html), I talked about my search for a guitar similar to the Nirvana Unplugged D18-e, and finding a similar - but far more affordable - Stafford SF-S1. 
+In our [last episode](/posts/20240224-stafford-sfs1.html), I talked about my search for a guitar similar to the Nirvana Unplugged D18-e, and finding a similar - but far more affordable - Stafford SF-S1. 
 
 Once I got it, in order to bring the Stafford more in line with the D18-e guitar, there were a few easy modifications I could make. Let's go down through the list:
 
@@ -23,7 +23,7 @@ The easiest of these were the bridge pins, and I swapped in some ebony pins on m
 
 Getting the white knobs was near impossible, because while finding large appliance style knobs to fit was easy, finding them in the appropriate off-white was not. Similarly, the D18-e knobs apparently had small black diamonds marks on them. After exploring some online options from some modders, I decided to buy some 25mm silver knobs [from Amazon](https://www.amazon.co.jp/dp/B081T3X38F) and spray them with some white acrylic paint. I had to be careful with excess paint around the bottoms, but in the end I think they were fine. I also detailed in the black diamond-shaped marks with a fine brush, and then put on a thin clear coat for protection. 
 
-![painting silver knobs white](painted-knobs.png)
+![painting silver knobs white](/static/images/painted-knobs.png)
 
 Now of course, the big difference between this and the D-18 is that the Stafford has four knobs and the D-18 has three. I'm willing to live with four, because removing one and patching a hole isn't really an option. 
 
@@ -33,7 +33,7 @@ As for the black ring labels that go underneath the knobs, this was also a big c
 
 From there, some sparse bits of double-sided tape could stick them onto the body. The result is below. It was a crude solution, but I'm actually pretty happy with it. Though I am keeping the original Gibson knobs should I ever decide to part with this guitar down the road.  
 
-![bass treble and volume labels](knobs-labels-2.png)
+![bass treble and volume labels](/static/images/knobs-labels-2.png)
 
 ### Pick-up Switch
 
@@ -41,7 +41,7 @@ The black pickup selector switch was changed for a off-white one to match the D1
 
 Once the knobs and labels were put on, I was quite pleased with how it turned out. It really did look very much like the Nirvana MTV Unplugged guitar.   
   
-![](Stafford-SF-S1-N-Guitar-sm.JPG)
+![Stafford SF-S1 modded](/static/images/Stafford-SF-S1-N-Guitar-sm.JPG)
 
 ### Pick Guard
 
