@@ -47,15 +47,13 @@ Once the knobs and labels were put on, I was quite pleased with how it turned ou
 
 One change I didn't make was adding a tortoise shell pickgard instead of the SF-S1's default black. While this wouldn't have been hard, I always felt like the pick-guard on the Cobain guitar looked pretty dark anyway -- so for now, I'm keeping the black one. 
 
-### One Missing Piece: The Bartolini Pick-up**
+### One Missing Piece: The Bartolini Pick-up
 
 Of course the big missing piece for a Cobain D18-e replica would be the Bartolini 3AV pickup, which are super rare and a little pricey, and most of the dealers (Sweetwater, etc) are US-based and don't ship to Japan. I did find one just recently, but I'll leave that for part 3, because that's another little mini adventure. 
 
 ### Overall Impressions 
 
-So what do I think of my new SF-S1 guitar? Overall, I think it plays pretty well, both when plugged into an amp and - pardon the pun - unplugged. The built-in mini-humbuckers sound decent, at least to my beginner ear. 
-
-And so for now, I'll stick with it. If I grow out of it and want something better later, I'll cross that bridge when I get there. 
+So what do I think of my new SF-S1 guitar? Overall, I think it plays pretty well, both when plugged into an amp and - pardon the pun - unplugged. The built-in mini-humbuckers sound decent, at least to my beginner ear. And so for now, I'll stick with it. If I grow out of it and want something better later, I'll cross that bridge when I get there. 
 
 But everything kinda hinges on the Bartolini pickup, which I'm hoping to sort out in the next month or so. Fingers crossed!
 
